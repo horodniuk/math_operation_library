@@ -1,6 +1,6 @@
 package logging_system.logger.stdout_logger;
 
-import logging_system.logger.AbstractLoggerConfigurationLoader;
+import logging_system.logger.LoggerConfigurationLoader;
 import logging_system.logger.LoggingLevel;
 
 import java.io.File;
@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class StdoutLoggerConfigurationLoader extends AbstractLoggerConfigurationLoader {
+public class StdoutLoggerConfigurationLoader extends LoggerConfigurationLoader {
     @Override
     public StdoutLoggerConfiguration load(File configFile) {
         try (FileReader reader = new FileReader(configFile)) {

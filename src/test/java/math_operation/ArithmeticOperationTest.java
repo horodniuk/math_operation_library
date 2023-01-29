@@ -1,15 +1,23 @@
 package math_operation;
 
+import logging_system.logger.Logger;
+import logging_system.logger.stdout_logger.StdoutLogger;
+import logging_system.logger.stdout_logger.StdoutLoggerConfigurationLoader;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.io.File;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class ArithmeticOperationTest {
+    String configPath = "src/main/java/logging_system/config/config.properties";
+    Logger logger = new StdoutLogger(
+            new StdoutLoggerConfigurationLoader().load(new File(configPath)));
+
     ArithmeticOperation arithmeticOperation;
 
     @BeforeEach
@@ -36,6 +44,9 @@ class ArithmeticOperationTest {
     void sumNumbersConvertShouldTrue(int a, int b, double resultOperation) {
         double expected = resultOperation;
         double actual = arithmeticOperation.add(a, b);
+        logger.info(getClass().getSimpleName() + " - " + "Method: add -> " +
+                    +a + " + " + b +
+                    " Expected: -> " + expected + "; Actual: ->" + actual);
     }
 
     private static Stream<Arguments> minusSum() {
@@ -57,5 +68,8 @@ class ArithmeticOperationTest {
     void minusNumbersConvertShouldTrue(int a, int b, double resultOperation) {
         double expected = resultOperation;
         double actual = arithmeticOperation.minus(a, b);
+        logger.info(getClass().getSimpleName() + " - " + "Method: minus -> " +
+                    +a + " - " + b +
+                    " Expected: -> " + expected + "; Actual: ->" + actual);
     }
 }

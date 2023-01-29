@@ -1,13 +1,12 @@
 package logging_system.logger.stdout_logger;
 
-import logging_system.logger.AbstractLogger;
-import logging_system.logger.AbstractLoggerConfiguration;
+import logging_system.logger.Logger;
 import logging_system.logger.LoggingLevel;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class StdoutLogger extends AbstractLogger {
+public class StdoutLogger extends Logger {
     StdoutLoggerConfiguration loggerConfiguration;
 
     public StdoutLogger(StdoutLoggerConfiguration loggerConfiguration) {

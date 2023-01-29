@@ -1,9 +1,9 @@
 package logging_system.logger.file_logger;
 
-import logging_system.logger.AbstractLoggerConfiguration;
+import logging_system.logger.LoggerConfiguration;
 import logging_system.logger.LoggingLevel;
 
-public class FileLoggerConfiguration extends AbstractLoggerConfiguration {
+public class FileLoggerConfiguration extends LoggerConfiguration {
     private final String pathFileLogger;
     private final long maxSize;
 

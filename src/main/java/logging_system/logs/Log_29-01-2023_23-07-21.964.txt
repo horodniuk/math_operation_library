@@ -1,4 +1,0 @@
-[29-01-2023_23-07] [DEBUG] Message [test-5 log-info]
-[29-01-2023_23-07] [DEBUG] Message [test-6 log-debug]
-[29-01-2023_23-07] [DEBUG] Message [test-7 log-info]
-[29-01-2023_23-07] [DEBUG] Message [test-8 log-debug]

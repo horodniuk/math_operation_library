@@ -1,6 +1,6 @@
 package logging_system.logger.file_logger;
 
-import logging_system.logger.AbstractLoggerConfigurationLoader;
+import logging_system.logger.LoggerConfigurationLoader;
 import logging_system.logger.LoggingLevel;
 
 import java.io.File;
@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class FileLoggerConfigurationLoader extends AbstractLoggerConfigurationLoader {
+public class FileLoggerConfigurationLoader extends LoggerConfigurationLoader {
     @Override
     public FileLoggerConfiguration load(File configFile) {
         try (FileReader reader = new FileReader(configFile)) {

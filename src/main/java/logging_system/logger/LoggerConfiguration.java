@@ -1,10 +1,10 @@
 package logging_system.logger;
 
-public abstract class AbstractLoggerConfiguration {
+public abstract class LoggerConfiguration {
     private final LoggingLevel logginLevel;
     private final String formatWritting;
 
-    public AbstractLoggerConfiguration(LoggingLevel logginLevel, String formatWritting) {
+    public LoggerConfiguration(LoggingLevel logginLevel, String formatWritting) {
         this.logginLevel = logginLevel;
         this.formatWritting = formatWritting;
     }

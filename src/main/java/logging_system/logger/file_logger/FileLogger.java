@@ -1,7 +1,7 @@
 package logging_system.logger.file_logger;
 
 
-import logging_system.logger.AbstractLogger;
+import logging_system.logger.Logger;
 import logging_system.logger.LoggingLevel;
 
 import java.io.BufferedWriter;
@@ -11,14 +11,14 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class FileLogger extends AbstractLogger {
+public class FileLogger extends Logger {
     private final FileLoggerConfiguration fileLoggerConfiguration;
     private String currentPath;
 
     public FileLogger(FileLoggerConfiguration fileLoggerConfiguration) {
         this.fileLoggerConfiguration = fileLoggerConfiguration;
         currentPath = fileLoggerConfiguration.getPathFileLogger() + String.format("Log_%s.txt", LocalDateTime.now()
-                .format(DateTimeFormatter.ofPattern("dd-MM-yyyy_HH-mm-ss.SSS")));
+                .format(DateTimeFormatter.ofPattern("dd-MM-yyyy_HH-mm-ss")));
     }
 
     @Override
